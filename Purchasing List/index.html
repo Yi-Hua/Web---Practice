@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purchasing List</title>
+    <!-- 引用Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="bg-white" id="shoppingListForm" onsubmit="formSend(event)">
+                    <h3>我的購物車</h3>
+                    <div class="form-group">
+                        <label for="productNameInput">商品名稱</label>
+                        <input type="text" id="productNameInput" placeholder="請輸入您想購買的商品" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPriceInput">商品價格</label>
+                        <input type="number" min="1" id="productPriceInput" placeholder="請輸入商品的價格" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategoryInput">商品類型</label>
+                        <select id="productCategoryInput" class="form-control">
+                            <option value="民生用品">民生用品</option>
+                            <option value="食品">食品</option>
+                            <option value="清潔用品">清潔用品</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="productRemarksInput" >備註</label>
+                        <input type="text" id="productRemarksInput" placeholder="您可以輸入商品的相關資訊" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button id="sendFormBtn" type="submit" class="btn btn-primary btn-lg">新增商品</button>
+                        <button onclick="clearShoppingList(event)" type="button"
+                            class="btn btn-danger btn-lg">清空購物車</button>
+                    </div>
+                    <p><small></small></p>
+                </form>
+            </div>
+        </div>
+        <div id="row" class="row mt-5">
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

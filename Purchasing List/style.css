@@ -1,0 +1,22 @@
+body {
+    background-image: url('https://picsum.photos/1000/1000?image=999');
+    background-size: cover;
+    min-height: 100vh;
+}
+#shoppingListForm {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 15px rgba(0,0,0,.3);
+}
+h3{
+    padding: 15px;
+    text-align: center;
+    color: #666666;
+    letter-spacing: 10px;
+}
+.form-group{
+    padding-left: 20px;
+    padding-right: 25px;
+}
