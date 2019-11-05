@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GPA 計算機</title>
+    <!-- 引用Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="bg-white" id="gpaForm" onsubmit="calculatorGPA(event);">
+                    <h3>GPA計算機</h3>
+                    <div class="form-group">
+                        <label for="chineseScoreInput">國文成績</label>
+                        <!-- type="float" 浮點數 -->
+                        <input id="chineseScoreInput" type="number" min="0" max="100" placeholder="請輸入國文成績 (0 - 100) "
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="englishScoreInput">英文成績</label>
+                        <input id="englishScoreInput" type="number" min="0" max="100" placeholder="請輸入英文成績 (0 - 100) "
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mathScoreInput">數學成績</label>
+                        <input id="mathScoreInput" type="number" min="0" max="100" placeholder="請輸入數學成績 (0 - 100) "
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button id="sendFormBtn" type="submit" class="btn btn-primary">計算GPA</button>
+                    </div>
+                    <p class="small-text"><small>平均分數大於或等於 90 分為 A+ <br>
+                        平均分數 80~89 分為 A <br>
+                        平均分數 70~79 分為 B <br>
+                        平均分數 60~69 分為 C <br>
+                        平均分數低於 60 為 F </small></p>
+                    <!-- 顯示報告的容器 -->
+                    <div id="result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 引用Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- main.js -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

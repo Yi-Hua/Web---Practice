@@ -1,0 +1,24 @@
+body {
+    background-image: url('https://picsum.photos/1600/1600?image=985');
+    background-size: cover;
+    min-height: 100vh;
+}
+#gpaForm {
+    padding: 40px;
+    margin-top: 100px;
+    /* padding: 15px; */
+    border-radius: 20px;
+    box-shadow: 0 20px 15px rgba(0,0,0,.3);
+}
+.form-group{
+    padding: 10px;
+    /* margin: 40px; */
+}
+.small-text{
+    color: #777;
+    padding: 10px;
+}
+h3{
+    color: #666;
+    text-align: center;
+}
